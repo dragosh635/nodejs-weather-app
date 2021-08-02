@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
         callback(body.error.info, undefined);
       } else {
           const weatherData = body.current;
-          callback(undefined, weatherData.weather_descriptions[0] + '. It is currently ' + weatherData.temperature + ' degress out. It feels like ' + weatherData.feelslike + ' degress out');
+          callback(undefined, weatherData.weather_descriptions[0] + '. It is currently ' + weatherData.temperature + ' degress out. It feels like ' + weatherData.feelslike + ' degress out. Wind speed: ' + weatherData.wind_speed);
       }
   });
 }
